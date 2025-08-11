@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shiv Chaudhary - DevOps Engineer</title>
+  <meta name="description" content="DevOps Engineer specializing in GCP infrastructure automation, Kubernetes operations, and CI/CD pipelines." />
+  <meta property="og:title" content="Shiv Chaudhary - DevOps Engineer" />
+  <meta property="og:description" content="GCP-certified DevOps Engineer with hands-on experience in Terraform, GKE, GitHub Actions, and observability." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a class="logo" href="#top">SC</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact" class="contact-cta">Contact</a>
+      </nav>
+      <button id="themeToggle" aria-label="Toggle dark mode">☾</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>Shiv Chaudhary</h1>
+        <p class="subtitle">DevOps Engineer — GCP | Kubernetes | Terraform | GitHub Actions</p>
+        <p class="intro">
+          Early-career DevOps Engineer with hands-on experience in GCP infrastructure automation, Kubernetes operations, and CI/CD pipeline design. Focused on cloud-native best practices and secure automation.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#experience">Experience</a>
+        </div>
+        <div class="links">
+          <a href="mailto:shiv.chaudhary.dev@gmail.com" rel="noopener">Email</a>
+          <a href="https://linkedin.com/in/shiv-chaudhary-" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/helloshiv01" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section container">
+      <h2>Experience</h2>
+
+      <article class="card">
+        <header class="card-head">
+          <div>
+            <h3>Searce Inc — Cloud DevOps Engineer</h3>
+            <p class="meta">Mumbai, India · Aug 2024 – Present</p>
+          </div>
+        </header>
+        <ul class="bullets">
+          <li>Designed reusable Terraform modules using Google’s Fabric FAST patterns for GCP (Compute Engine, Cloud SQL, GKE), standardizing 50+ resources and reducing provisioning time from 15 min to 2 min (87%).</li>
+          <li>Managed GKE operations: implemented HPA-based autoscaling and resource requests/limits to improve efficiency and cluster stability.</li>
+          <li>Enabled Workload Identity Federation on GKE: annotated KSA for GitHub ARC runners and External Secrets Operator mapped to GCP IAM SA for secure, keyless access.</li>
+          <li>Enforced IAM least privilege via Terraform validations; reduced excessive permissions by 60% across 50+ service accounts; assisted with VPC-SC boundaries.</li>
+          <li>Set up Prometheus/Grafana and Cloud Logging integration; contributed dashboards and proactive alerts.</li>
+          <li>Built GitHub Actions pipelines: deployed self-hosted ARC runners on GKE via Helm; automated rollouts for 20+ microservices (ActiveMQ, ESO, k8s secrets) with promotion and rollback.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <header class="card-head">
+          <div>
+            <h3>IIT Bombay — DevOps Research Intern</h3>
+            <p class="meta">Hybrid · Mar 2024 – Jul 2024</p>
+          </div>
+        </header>
+        <ul class="bullets">
+          <li>Automated backups with Python/Bash, reducing RTO from 2 hr to 30 min; eliminated 10+ manual hours weekly.</li>
+          <li>Created Ansible playbooks to manage 10+ servers with idempotent deployments; reached 100% config consistency on GCP instances.</li>
+          <li>Optimized Jenkins with parallel tests and Docker builds; cut deployment time 20% (45 min → 36 min) and improved reliability.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+
+      <article class="card project">
+        <header class="card-head">
+          <h3>Quantified Self Dashboard</h3>
+          <p class="meta">Cloud Run · Docker · Flask · SQLite</p>
+        </header>
+        <ul class="bullets">
+          <li>Deployed containerized Flask app on Cloud Run behind serverless NEGs and L7 HTTP(S) Load Balancer with custom domain and path-based routing.</li>
+          <li>Secured sensitive endpoints with Identity-Aware Proxy (IAP) for authenticated access.</li>
+          <li>Implemented zero-downtime deployments with Cloud Build CI/CD.</li>
+        </ul>
+      </article>
+
+      <article class="card project">
+        <header class="card-head">
+          <h3>Django Deployment System</h3>
+          <p class="meta">Nginx · Gunicorn · GitHub Actions · DigitalOcean</p>
+        </header>
+        <ul class="bullets">
+          <li>Automated blue-green deployments with Nginx and self-service pipeline to reduce setup time.</li>
+          <li>Configured automated SSL certificate renewal.</li>
+        </ul>
+      </article>
+
+      <article class="card project">
+        <header class="card-head">
+          <h3>Cloud Resume Platform</h3>
+          <p class="meta">Terraform · GitHub Actions · GCP Storage · Load Balancer · DNS</p>
+        </header>
+        <ul class="bullets">
+          <li>Provisioned infra via Terraform modules for a global external L7 load balancer in front of a static site.</li>
+          <li>Used GitHub Actions with OIDC to eliminate service account keys.</li>
+          <li>Enabled CDN caching and security headers for performance and security.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <h4>Cloud</h4>
+          <p>GCP (Primary, Certified), AWS (EC2/IAM/S3), Azure (Exploratory)</p>
+        </div>
+        <div>
+          <h4>IaC</h4>
+          <p>Terraform (Proficient), Ansible (Intermediate)</p>
+        </div>
+        <div>
+          <h4>Containers & Orchestration</h4>
+          <p>Docker (Prod), Kubernetes/GKE (Prod)</p>
+        </div>
+        <div>
+          <h4>CI/CD</h4>
+          <p>GitHub Actions (Advanced), GitLab CI (Intermediate), Jenkins (Basic), ArgoCD (Basic)</p>
+        </div>
+        <div>
+          <h4>Observability</h4>
+          <p>Prometheus, Grafana, Cloud Logging (Advanced), Datadog (Basic)</p>
+        </div>
+        <div>
+          <h4>Security</h4>
+          <p>IAM, VPC, K8s Network Policies (assisted), OPA Gatekeeper (basics)</p>
+        </div>
+        <div>
+          <h4>Scripting</h4>
+          <p>Python, Bash (Prod-grade), Go (learning)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section container">
+      <h2>Certifications</h2>
+      <ul class="bullets">
+        <li>Google Cloud Associate Cloud Engineer — Mar 2023</li>
+        <li>Google Cloud Digital Leader — Dec 2022</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <div class="card contact-card">
+        <ul class="contact-list">
+          <li><strong>Email:</strong> <a href="mailto:shiv.chaudhary.dev@gmail.com">shiv.chaudhary.dev@gmail.com</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/shiv-chaudhary-" target="_blank" rel="noopener">linkedin.com/in/shiv-chaudhary-</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/helloshiv01" target="_blank" rel="noopener">github.com/helloshiv01</a></li>
+          <li><strong>Mobile:</strong> +91-7014-856-509</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Shiv Chaudhary. All rights reserved.</p>
+      <a href="#top" class="back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -10,50 +10,111 @@
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0f172a" />
   <link rel="icon" href="assets/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Feather Icons -->
+  <script defer src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-wrap">
-      <a class="logo" href="#top">SC</a>
+      <a class="logo" href="#top" aria-label="Home">SC</a>
       <nav class="nav" aria-label="Main">
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact" class="contact-cta">Contact</a>
+        <a href="#experience"><i data-feather="briefcase" class="i"></i><span>Experience</span></a>
+        <a href="#projects"><i data-feather="grid" class="i"></i><span>Projects</span></a>
+        <a href="#skills"><i data-feather="cpu" class="i"></i><span>Skills</span></a>
+        <a href="#certifications"><i data-feather="award" class="i"></i><span>Certifications</span></a>
+        <a href="#contact" class="contact-cta"><i data-feather="send" class="i"></i><span>Contact</span></a>
       </nav>
-      <button id="themeToggle" aria-label="Toggle dark mode">☾</button>
+      <button id="themeToggle" aria-label="Toggle dark mode" class="icon-btn"><i data-feather="moon"></i></button>
     </div>
   </header>
 
   <main id="top">
     <section class="hero container">
-      <div class="hero-text">
-        <h1>Shiv Chaudhary</h1>
-        <p class="subtitle">DevOps Engineer — GCP | Kubernetes | Terraform | GitHub Actions</p>
-        <p class="intro">
-          Early-career DevOps Engineer with hands-on experience in GCP infrastructure automation, Kubernetes operations, and CI/CD pipeline design. Focused on cloud-native best practices and secure automation.
-        </p>
-        <div class="actions">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn" href="#experience">Experience</a>
+      <div class="hero-grid">
+        <div class="hero-text">
+          <div class="eyebrow">DevOps • SRE • Cloud</div>
+          <h1 class="animate-in">Shiv Chaudhary</h1>
+          <p class="subtitle animate-in delay-1">DevOps Engineer — GCP • Kubernetes • Terraform • GitHub Actions</p>
+          <p class="intro animate-in delay-2">
+            Early-career DevOps Engineer with hands-on experience in GCP infrastructure automation, Kubernetes operations, and CI/CD pipeline design. Focused on cloud-native best practices and secure automation.
+          </p>
+          <div class="actions animate-in delay-3">
+            <a class="btn primary" href="#projects"><i data-feather="folder"></i> View Projects</a>
+            <a class="btn" href="#experience"><i data-feather="activity"></i> Experience</a>
+            <a class="btn" href="assets/Shiv_Chaudhary_Latest_Resume.pdf" target="_blank" rel="noopener"><i data-feather="download"></i> Resume</a>
+          </div>
+          <div class="links animate-in delay-4">
+            <a href="mailto:shiv.chaudhary.dev@gmail.com" rel="noopener"><i data-feather="mail"></i> Email</a>
+            <a href="https://linkedin.com/in/shiv-chaudhary-" target="_blank" rel="noopener"><i data-feather="linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/helloshiv01" target="_blank" rel="noopener"><i data-feather="github"></i> GitHub</a>
+          </div>
+          <div class="badge-row animate-in delay-4" aria-label="Technologies">
+            <span class="badge">GCP</span>
+            <span class="badge">GKE</span>
+            <span class="badge">Terraform</span>
+            <span class="badge">GitHub Actions</span>
+            <span class="badge">Ansible</span>
+            <span class="badge">Prometheus</span>
+          </div>
         </div>
-        <div class="links">
-          <a href="mailto:shiv.chaudhary.dev@gmail.com" rel="noopener">Email</a>
-          <a href="https://linkedin.com/in/shiv-chaudhary-" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/helloshiv01" target="_blank" rel="noopener">GitHub</a>
+
+        <!-- Lightweight animated mascot: Cloud-native Otter -->
+        <div class="hero-anim animate-in delay-2" aria-hidden="true">
+          <svg class="otter" viewBox="0 0 320 320" width="280" height="280" role="img">
+            <defs>
+              <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#22d3ee"/>
+                <stop offset="100%" stop-color="#60a5fa"/>
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <!-- Cloud -->
+            <g class="cloud">
+              <ellipse cx="160" cy="110" rx="90" ry="36" fill="url(#grad)" opacity="0.15"/>
+              <ellipse cx="120" cy="110" rx="38" ry="22" fill="url(#grad)" opacity="0.18"/>
+              <ellipse cx="200" cy="110" rx="38" ry="22" fill="url(#grad)" opacity="0.18"/>
+            </g>
+            <!-- Otter body -->
+            <g class="mascot" filter="url(#glow)">
+              <ellipse cx="160" cy="175" rx="58" ry="68" fill="#0ea5e9"/>
+              <circle cx="160" cy="145" r="28" fill="#38bdf8"/>
+              <!-- Ears -->
+              <circle cx="140" cy="128" r="7" fill="#0891b2"/>
+              <circle cx="180" cy="128" r="7" fill="#0891b2"/>
+              <!-- Eyes -->
+              <circle cx="150" cy="145" r="4" fill="#0f172a"/>
+              <circle cx="170" cy="145" r="4" fill="#0f172a"/>
+              <!-- Nose -->
+              <circle cx="160" cy="152" r="3.5" fill="#0f172a"/>
+              <!-- Whiskers -->
+              <path d="M138 155h18" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M164 155h18" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
+              <!-- Wrench (DevOps) -->
+              <path d="M205 200l15 15m-35-5l20-10" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round"/>
+              <!-- Tail -->
+              <path d="M190 220c28 6 42 24 52 42" stroke="#0284c7" stroke-width="10" stroke-linecap="round" fill="none"/>
+            </g>
+          </svg>
+          <div class="anim-caption">Cloud-native Otter — friendly SRE/DevOps companion</div>
         </div>
       </div>
+      <div class="divider"></div>
     </section>
 
     <section id="experience" class="section container">
-      <h2>Experience</h2>
+      <h2><i data-feather="briefcase" class="i"></i> Experience</h2>
 
-      <article class="card">
+      <article class="card hover-up">
         <header class="card-head">
           <div>
             <h3>Searce Inc — Cloud DevOps Engineer</h3>
@@ -61,7 +122,7 @@
           </div>
         </header>
         <ul class="bullets">
-          <li>Designed reusable Terraform modules using Google’s Fabric FAST patterns for GCP (Compute Engine, Cloud SQL, GKE), standardizing 50+ resources and reducing provisioning time from 15 min to 2 min (87%).</li>
+          <li>Designed reusable Terraform modules using Google’s Fabric FAST patterns for GCP (Compute Engine, Cloud SQL, GKE), standardizing 50+ resources and reducing provisioning time from 15min to 2min (87%).</li>
           <li>Managed GKE operations: implemented HPA-based autoscaling and resource requests/limits to improve efficiency and cluster stability.</li>
           <li>Enabled Workload Identity Federation on GKE: annotated KSA for GitHub ARC runners and External Secrets Operator mapped to GCP IAM SA for secure, keyless access.</li>
           <li>Enforced IAM least privilege via Terraform validations; reduced excessive permissions by 60% across 50+ service accounts; assisted with VPC-SC boundaries.</li>
@@ -70,7 +131,7 @@
         </ul>
       </article>
 
-      <article class="card">
+      <article class="card hover-up">
         <header class="card-head">
           <div>
             <h3>IIT Bombay — DevOps Research Intern</h3>
@@ -78,17 +139,17 @@
           </div>
         </header>
         <ul class="bullets">
-          <li>Automated backups with Python/Bash, reducing RTO from 2 hr to 30 min; eliminated 10+ manual hours weekly.</li>
+          <li>Automated backups with Python/Bash, reducing RTO from 2hr to 30min; eliminated 10+ manual hours weekly.</li>
           <li>Created Ansible playbooks to manage 10+ servers with idempotent deployments; reached 100% config consistency on GCP instances.</li>
-          <li>Optimized Jenkins with parallel tests and Docker builds; cut deployment time 20% (45 min → 36 min) and improved reliability.</li>
+          <li>Optimized Jenkins with parallel tests and Docker builds; cut deployment time 20% (45min → 36min) and improved reliability.</li>
         </ul>
       </article>
     </section>
 
     <section id="projects" class="section container">
-      <h2>Projects</h2>
+      <h2><i data-feather="grid" class="i"></i> Projects</h2>
 
-      <article class="card project">
+      <article class="card project hover-up">
         <header class="card-head">
           <h3>Quantified Self Dashboard</h3>
           <p class="meta">Cloud Run · Docker · Flask · SQLite</p>
@@ -100,7 +161,7 @@
         </ul>
       </article>
 
-      <article class="card project">
+      <article class="card project hover-up">
         <header class="card-head">
           <h3>Django Deployment System</h3>
           <p class="meta">Nginx · Gunicorn · GitHub Actions · DigitalOcean</p>
@@ -111,7 +172,7 @@
         </ul>
       </article>
 
-      <article class="card project">
+      <article class="card project hover-up">
         <header class="card-head">
           <h3>Cloud Resume Platform</h3>
           <p class="meta">Terraform · GitHub Actions · GCP Storage · Load Balancer · DNS</p>
@@ -125,7 +186,7 @@
     </section>
 
     <section id="skills" class="section container">
-      <h2>Skills</h2>
+      <h2><i data-feather="cpu" class="i"></i> Skills</h2>
       <div class="skills-grid">
         <div>
           <h4>Cloud</h4>
@@ -159,7 +220,7 @@
     </section>
 
     <section id="certifications" class="section container">
-      <h2>Certifications</h2>
+      <h2><i data-feather="award" class="i"></i> Certifications</h2>
       <ul class="bullets">
         <li>Google Cloud Associate Cloud Engineer — Mar 2023</li>
         <li>Google Cloud Digital Leader — Dec 2022</li>
@@ -167,13 +228,13 @@
     </section>
 
     <section id="contact" class="section container">
-      <h2>Contact</h2>
-      <div class="card contact-card">
+      <h2><i data-feather="send" class="i"></i> Contact</h2>
+      <div class="card contact-card hover-up">
         <ul class="contact-list">
-          <li><strong>Email:</strong> <a href="mailto:shiv.chaudhary.dev@gmail.com">shiv.chaudhary.dev@gmail.com</a></li>
-          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/shiv-chaudhary-" target="_blank" rel="noopener">linkedin.com/in/shiv-chaudhary-</a></li>
-          <li><strong>GitHub:</strong> <a href="https://github.com/helloshiv01" target="_blank" rel="noopener">github.com/helloshiv01</a></li>
-          <li><strong>Mobile:</strong> +91-7014-856-509</li>
+          <li><i data-feather="mail" class="i"></i><strong>Email:</strong> <a href="mailto:shiv.chaudhary.dev@gmail.com">shiv.chaudhary.dev@gmail.com</a></li>
+          <li><i data-feather="linkedin" class="i"></i><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/shiv-chaudhary-" target="_blank" rel="noopener">linkedin.com/in/shiv-chaudhary-</a></li>
+          <li><i data-feather="github" class="i"></i><strong>GitHub:</strong> <a href="https://github.com/helloshiv01" target="_blank" rel="noopener">github.com/helloshiv01</a></li>
+          <li><i data-feather="phone" class="i"></i><strong>Mobile:</strong> +91-7014-856-509</li>
         </ul>
       </div>
     </section>
@@ -182,7 +243,7 @@
   <footer class="site-footer">
     <div class="container footer-wrap">
       <p>© <span id="year"></span> Shiv Chaudhary. All rights reserved.</p>
-      <a href="#top" class="back-to-top">Back to top ↑</a>
+      <a href="#top" class="back-to-top"><i data-feather="arrow-up"></i> Back to top</a>
     </div>
   </footer>
 
